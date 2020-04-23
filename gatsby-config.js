@@ -6,7 +6,7 @@ module.exports = {
     siteUrl: urljoin(configs.app_url, configs.path_prefix),
     title: configs.app_name,
     description: configs.app_description,
-    author: configs.twitter_username,
+    author: "UnosoftLabs",
   },
   plugins: [
     `gatsby-plugin-react-helmet`,
@@ -35,12 +35,22 @@ module.exports = {
     {
       resolve: `gatsby-plugin-google-analytics`,
       options: {
-        trackingId: configs.google_analytics_ID
-      }
+        trackingId: configs.google_analytics_ID,
+      },
     },
     `gatsby-plugin-styled-components`,
     `gatsby-plugin-offline`,
     `gatsby-plugin-netlify`,
+    {
+      resolve: `gatsby-plugin-google-fonts`,
+      options: {
+        fonts: [
+          `Cabin`,
+          //`source sans pro\:300,400,400i,700`, // you can also specify font weights and styles
+        ],
+        display: "swap",
+      },
+    },
     // this (optional) plugin enables Progressive Web App + Offline functionality
     // To learn more, visit: https://gatsby.dev/offline
     // 'gatsby-plugin-offline',
