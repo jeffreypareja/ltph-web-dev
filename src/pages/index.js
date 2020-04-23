@@ -1,6 +1,7 @@
 import React from "react"
 import { graphql } from "gatsby"
 import Img from "gatsby-image"
+import {Link} from 'gatsby'
 
 import Layout from "../components/layout"
 import SEO from "../components/seo"
@@ -185,7 +186,8 @@ const IndexPage = ({ data }) => (
               ) : (
                 `${configs.your_name}`
               )}
-              {configs.your_city && ` in ${configs.your_city}`}
+              {configs.your_city && ` in ${configs.your_city}`} <br/>
+              <Link to = "/privacy">Privacy Policy and Terms</Link  >
             </p>
             <div className="footerIcons">
               {configs.facebook_username && (
